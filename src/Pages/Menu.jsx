@@ -37,6 +37,14 @@ function Menu() {
                 </li>
                 <li className="nav-item">
                     <NavLink to={`/hooks/effect`} className="nav-link">Effect hook</NavLink>
+                    <ul className="nav flex-column ms-4">
+                        <li className="nav-item">
+                            <NavLink to={`/hooks/effect/useEffect`} className="nav-link">useEffect Hook</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to={`/hooks/effect/useLayoutEffect`} className="nav-link">useLayoutEffect Hook</NavLink>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>

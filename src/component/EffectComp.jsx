@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 function EffectComp() {
   return (
@@ -8,6 +9,7 @@ function EffectComp() {
                 <h3 className="display-3 text-danger">EffectComp</h3>
             </div>
         </div>
+        <Outlet/>
     </div>
   )
 }
