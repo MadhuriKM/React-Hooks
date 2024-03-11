@@ -42,6 +42,9 @@ function Menu() {
                             <NavLink to={`/hooks/effect/useEffect`} className="nav-link">useEffect Hook</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink to={`/hooks/effect/useEffect/2`} className="nav-link">useEffect-2 Hook</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink to={`/hooks/effect/useLayoutEffect`} className="nav-link">useLayoutEffect Hook</NavLink>
                         </li>
                     </ul>
