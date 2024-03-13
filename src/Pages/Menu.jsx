@@ -49,6 +49,34 @@ function Menu() {
                         </li>
                     </ul>
                 </li>
+
+                <li className="nav-item">
+                    <NavLink to={`/hooks/ref`} className="nav-link">Ref Hooks</NavLink>
+                    <ul className="nav flex-column ms-4">
+                        <li className="nav-item">
+                            <NavLink to={`/hooks/ref/useRef`} className="nav-link">useRef Hook</NavLink>
+                        </li>
+                    </ul>
+                </li>
+                <li className="nav-item">
+                    <NavLink to={`/hooks/perform`} className="nav-link">Performance Hooks</NavLink>
+                    <ul className="nav flex-column ms-4">
+                        <li className="nav-item">
+                            <NavLink to={`/hooks/perform/useCallback`} className="nav-link">useCallback Hook</NavLink>
+                        </li>
+                        <li className='nav-item'>
+                            <NavLink to={`/hooks/perform/useMemo`} className="nav-link">useMemo Hook</NavLink>
+                        </li>
+                    </ul>
+                </li>
+                <li className="nav-item">
+                    <NavLink to={`/hooks/context`} className="nav-link">Context Hooks</NavLink>
+                    <ul className="nav flex-column ms-4">
+                        <li className="nav-item">
+                            <NavLink to={`/hooks/context/useContext`} className="nav-link">useContext Hook</NavLink>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
        </div>
