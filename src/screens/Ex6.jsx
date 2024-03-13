@@ -1,7 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
  function Ex6() {
+    const [len,setLen] = useState(0)
     const x = useRef()
+
+    const fname = useRef()
+    const femail = useRef()
+    const fdob = useRef()
+    const fmsg = useRef()
 
     const handler = () => {
         console.log('clicked')
@@ -18,6 +24,25 @@ import React, { useRef } from 'react'
             }, 3000)
         }
     }
+
+    const submitHandler = () => {
+        let data = {
+            name: fname.current.value,
+            email: femail.current.value,
+            dob: fdob.current.value,
+            msg: fmsg.current.value
+        }
+        console.log('final =', data)
+    }
+
+    const clickHandler = () => {
+    if(fmsg.current.value.length > 50) {
+       console.log(`length should not exceed 50 characters`)
+    } else {
+      setLen( fmsg.current.value.length)
+    }
+  }
+
     return (
         <div className="container">
             <div className="row">
@@ -42,15 +67,26 @@ import React, { useRef } from 'react'
                 <div className="card">
                     <div className="card-body">
                         <div className="form-group mt-2">
-                            <label htmlFor="name">Email</label>
-                            <input type="text" name="" id="" className="form-control" />
+                            <label htmlFor="name">Name</label>
+                            <input type="text" name="" id="" ref={fname} className="form-control" />
                         </div>
                         <div className="form-group mt-2">
                             <label htmlFor="email">Email</label>
-                            <input type="email" name="" id="" className="form-control" />
+                            <input type="email" name="" id="" ref={femail} className="form-control" />
+                        </div>
+                        
+                        <div className="form-group mt-2">
+                            <label htmlFor="date">DOB</label>
+                            <input type="date" name="" id="" ref={fdob} className="form-control" />
+                        </div>
+
+                        <div className="form-group mt-2">
+                            <label htmlFor="msg">Enter your message</label>
+                            <textarea name="msg" id="msg" cols="30" rows="6" ref={fmsg} onKeyUp={clickHandler} className='form-control'></textarea>
+                             <strong className="text-strong" id="msgLen"> { len }</strong>
                         </div>
                         <div className="form-group mt-2">
-                            <button className="btn btn-primary">Submit</button>
+                            <button className="btn btn-primary" onClick={submitHandler}>Submit</button>
                         </div>
                     </div>
                 </div>
